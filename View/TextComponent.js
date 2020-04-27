@@ -36,7 +36,6 @@ puremvc.define
 
 		addEventListener: function ( type, listener, useCapture )
 		{
-			// delegate to #textForm
 			this.textForm.addEventListener( type, listener, useCapture );
 		},
 		
