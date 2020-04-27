@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<body>
+	<form id="textForm">
+		<fieldset>
+
+			<div>
+				<label>Your Name: </label>
+				<input type="text" id="inputText">
+			</div>
+
+			<div>
+				<button type="submit">Ok</button>
+			</div>
+
+			<div>
+				<label>Greeting:</label>
+				<div>
+					<input type="text" id="outputText">
+				</div>
+			</div>
+
+
+		</fieldset>
+	</form>
+
+	<!-- PUREMVC LIBRARY -->
+	<script src="lib/js/puremvc-1.0.js"></script>
+
+	<script src="AppConstants.js"></script>
+	<script src="ApplicationFacade.js"></script>
+	<script src="Model/TextProxy.js"></script>
+	<script src="Controller/StartupCommand.js"></script>
+	<script src="Controller/PrepareControllerCommand.js"></script>
+	<script src="Controller/PrepareModelCommand.js"></script>
+	<script src="Controller/PrepareViewCommand.js"></script>
+	<script src="Controller/ProcessTextCommand.js"></script>
+	<script src="View/TextComponent.js"></script>
+	<script src="View/TextComponentMediator.js"></script>
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			demo.ApplicationFacade.getInstance(demo.ApplicationFacade.NAME).startup();
+		});
+	</script>
+</body>
+
+</html>
